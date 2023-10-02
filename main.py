@@ -5,7 +5,6 @@ import requests
 import boto3
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
-
 from model import YudarlinnSegment
 
 # 1. 환경변수 검증

@@ -46,7 +46,7 @@ engine = create_engine(f"{dialect}://{os.environ['DB_USERNAME']}:{os.environ['DB
 
 # 데이터 추가
 s3_link = f"{os.environ['S3_URL']}/{os.environ['S3_BUCKET_NAME']}/{upload_file_name}"
-converted_date = datetime.strptime(os.environ['DATE'], '%Y-%m-%dT%H:%M:%SZ')
+converted_date = datetime.strptime(os.environ['DATE'], '%Y-%m-%dT%H:%M:%S+00:00')
 current_date = datetime.utcnow()
 new_segment = YudarlinnSegment(
     stream_id=os.environ['STREAM_ID'],

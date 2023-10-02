@@ -11,7 +11,7 @@ COPY ./requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
 # 모든 파일을 /app 디렉터리에 복사합니다.
-COPY ./ /code/
+COPY ./ /app/
 
 # main.py를 실행합니다.
 CMD ["python", "main.py"]

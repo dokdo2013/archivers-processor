@@ -1,2 +1,2 @@
-# yudarlinn-processor
-[yudarlinn recorder] slave job - process media file
+# archivers-processor
+[Archivers] slave job - process media file

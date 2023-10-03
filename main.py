@@ -5,7 +5,7 @@ import requests
 import boto3
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
-from model import YudarlinnSegment
+from model import Segment
 import dotenv
 
 dotenv.load_dotenv()
@@ -55,7 +55,7 @@ print("[4] DB 연결 완료")
 s3_link = f"{os.environ['S3_URL']}/{os.environ['S3_BUCKET_NAME']}/{upload_file_name}"
 converted_date = datetime.strptime(os.environ['DATE'], '%Y-%m-%dT%H:%M:%S+00:00')
 current_date = datetime.utcnow()
-new_segment = YudarlinnSegment(
+new_segment = Segment(
     stream_id=os.environ['STREAM_ID'],
     segment_id=str(uuid_file_name),
     segment_length=float(os.environ['SEGMENT_DURATION']),

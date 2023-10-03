@@ -6,14 +6,13 @@ from datetime import datetime
 Base = declarative_base()
 
 
-class YudarlinnSegment(Base):
-    __tablename__ = 'yudarlinn_segment'
+class Segment(Base):
+    __tablename__ = 'segment'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     stream_id = Column(String(255))
     segment_id = Column(String(255))
     segment_length = Column(Numeric(10, 6))
-    segment_number = Column(Integer)
     link = Column(String(255))
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
